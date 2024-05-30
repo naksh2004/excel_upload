@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Report</title>
+</head>
+<body>
+    <h1>Summary Report</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>State</th>
+                <th>DPD</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in summary_data %}
+            <tr>
+                <td>{{ entry.cust_state }}</td>
+                <td>{{ entry.dpd }}</td>
+                <td>{{ entry.count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
