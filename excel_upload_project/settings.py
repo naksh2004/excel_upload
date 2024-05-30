@@ -28,7 +28,10 @@ SECRET_KEY = 'django-insecure-gy$lv8mu4&mm@u=!1!mq_+4em!n)71tx^1m2tq0s1)5^_c!r)=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+
+ALLOWED_HOSTS = ['excelupload-production.up.railway.app']
+
 
 
 # Application definition
