@@ -30,4 +30,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Start the Gunicorn server
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "excel_upload_project.wsgi:application"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
