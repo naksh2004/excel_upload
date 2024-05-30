@@ -18,9 +18,9 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
-# manage.py or wsgi.py
 
-import os
+
+
 
 
 if __name__ == "__main__":
