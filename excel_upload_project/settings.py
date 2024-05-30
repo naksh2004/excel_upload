@@ -11,7 +11,14 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+
+
 import os
+from django.core.management import execute_from_command_line
+
+if __name__ == "__main__":
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "your_project.settings")
+    execute_from_command_line(['manage.py', 'runserver', '0.0.0.0:' + os.environ.get('PORT', '8000')])
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
