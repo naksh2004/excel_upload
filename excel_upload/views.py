@@ -4,6 +4,16 @@ from django.shortcuts import render
 from .models import CustomerRecord
 from django.db.models import Count
 
+def homepage(request):
+    context = {
+        'app_description': 'Welcome to our application! This application allows you to upload Excel files and process the data efficiently.',
+        'apis': [
+            {'name': 'Upload Excel', 'url': '/upload/'},
+            {'name': 'Get Results', 'url': '/generate_summary_report'},
+            # Add more APIs as needed
+        ]
+    }
+    return render(request, 'homepage.html', context)
 
 def upload_file(request):
     if request.method == 'POST' and request.FILES['file']:
