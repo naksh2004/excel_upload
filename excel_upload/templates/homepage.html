@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Our Application</title>
+</head>
+<body>
+    <h1>Welcome to Our Application</h1>
+    <p>{{ app_description }}</p>
+
+    <h2>Available APIs</h2>
+    <ul>
+        {% for api in apis %}
+            <li><a href="{{ api.url }}">{{ api.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
